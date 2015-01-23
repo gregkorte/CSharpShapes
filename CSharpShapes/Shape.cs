@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace CSharpShapes
 {
-    public class Shape
+    abstract public class Shape
     {
         // Width, Height, Perimeter, Area, BorderColor, FillColor, NumberOfSides
 
@@ -24,25 +24,25 @@ namespace CSharpShapes
         /// <summary>
         /// The number of sides to the shape.
         /// </summary>
-        public virtual int SidesCount { get; }
+        abstract public int SidesCount { get; }
 
         /// <summary>
         /// Calculates the area of the shape.
         /// </summary>
         /// <returns>
         /// The area of the shape.</returns>
-        public abstract decimal Area();
+        abstract public decimal Area();
 
         /// <summary>
         /// Calculates the perimeter of the shape.
         /// </summary>
         /// <returns>The perimeter of the shape</returns>
-        public abstract int Perimeter();
+        abstract public int Perimeter();
 
         /// <summary>
         /// Scales the shape in size.
         /// </summary>
         /// <param name="percentage">The percentage by which to scale the shape.</param>
-        public abstract void scale(int percent);
+        abstract public void scale(int percent);
     }
 }
