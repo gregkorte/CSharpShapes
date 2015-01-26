@@ -26,6 +26,12 @@ namespace CSharpShapes
         /// </summary>
         abstract public int SidesCount { get; }
 
+        public Shape()
+        {
+            BorderColor = Color.Tomato;
+            FillColor = Color.Bisque;
+        }
+
         /// <summary>
         /// Calculates the area of the shape.
         /// </summary>
@@ -37,12 +43,12 @@ namespace CSharpShapes
         /// Calculates the perimeter of the shape.
         /// </summary>
         /// <returns>The perimeter of the shape</returns>
-        abstract public int Perimeter();
+        abstract public decimal Perimeter();
 
         /// <summary>
         /// Scales the shape in size.
         /// </summary>
         /// <param name="percentage">The percentage by which to scale the shape.</param>
-        abstract public void scale(int percent);
+        abstract public void Scale(int percent);
     }
 }
