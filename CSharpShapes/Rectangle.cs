@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CSharpShapes
 {
-    public class Rectangle : Shape
+    public class Rectangle : Quadrilateral
     {
         private decimal width;
         public decimal Width
@@ -19,11 +19,6 @@ namespace CSharpShapes
             get { return this.height; }
         }
 
-        public override int SidesCount
-        {
-            get { return 4; }
-        }
-
         public Rectangle(int width, int height)
         {
             if (width <= 0 || height <= 0)
@@ -33,7 +28,6 @@ namespace CSharpShapes
             this.width = width;
             this.height = height;
         }
-
 
         public override decimal Area()
         {

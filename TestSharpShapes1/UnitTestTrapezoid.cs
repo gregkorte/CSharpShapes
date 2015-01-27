@@ -14,7 +14,25 @@ namespace TestSharpShapes1
             Assert.AreEqual(5, trapezoid.Base1);
             Assert.AreEqual(8, trapezoid.Base2);
             Assert.AreEqual(2, trapezoid.Height);
+            //Assert.AreEqual(60, trapezoid AcuteAngle)
+            //Assert.AreEqual(120, trapezoid ObtuseAngle)
         }
+
+        //[TestMethod]
+        //public void TestTrapezoidConstructorCalculateAngles1()
+        //{
+        //    Trapezoid trapezoid = new Trapezoid(5, 8, 2);
+        //    Assert.AreEqual(60, trapezoid AcuteAngle);
+        //    Assert.AreEqual(120, trapezoid ObtuseAngle);
+        //}
+
+        //[TestMethod]
+        //public void TestTrapezoidConstructorCalculateAngles2()
+        //{
+        //    Trapezoid trapezoid = new Trapezoid(20, 15, 2);
+        //    Assert.AreEqual(33.69, trapezoid AcuteAngle);
+        //    Assert.AreEqual(146.31, trapezoid ObtuseAngle);
+        //}
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
