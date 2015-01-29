@@ -23,11 +23,6 @@ namespace CSharpShapes
             get { return this.height; }
         }
 
-        public override int SidesCount
-        {
-            get { return 4; }
-        }
-
         public Trapezoid(int base1, int base2, int height)
         {
             if (base1 <= 0 || base2 <= 0 || height <= 0)
@@ -41,7 +36,7 @@ namespace CSharpShapes
 
         public override decimal Area()
         {
-            throw new NotImplementedException();
+            return (base1 + base2) / 2 * height;
         }
 
         public override decimal Perimeter()
@@ -51,7 +46,13 @@ namespace CSharpShapes
 
         public override void Scale(int percent)
         {
-            throw new NotImplementedException();
+            if (percent <= 0)
+            {
+                throw new NotImplementedException();
+            }
+            this.base1 = base1 * percent / 100;
+            this.base2 = base2 * percent / 100;
+            this.height = height * percent / 100;
         }
     }
 }

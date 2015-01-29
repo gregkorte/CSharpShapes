@@ -91,9 +91,9 @@ namespace TestSharpShapes1
         {
             Trapezoid trapezoid = new Trapezoid(8, 12, 3);
             trapezoid.Scale(150);
-            Assert.AreEqual((decimal)8, trapezoid.Base1);
-            Assert.AreEqual(12, trapezoid.Base2);
-            Assert.AreEqual(3, trapezoid.Height);
+            Assert.AreEqual(12, trapezoid.Base1);
+            Assert.AreEqual(18, trapezoid.Base2);
+            Assert.AreEqual((decimal)4.5, trapezoid.Height);
         }
 
         [TestMethod]
@@ -111,9 +111,9 @@ namespace TestSharpShapes1
         {
             Trapezoid trapezoid = new Trapezoid(5, 8, 2);
             trapezoid.Scale(37);
-            Assert.AreEqual(5, trapezoid.Base1);
-            Assert.AreEqual(8, trapezoid.Base2);
-            Assert.AreEqual(2, trapezoid.Height);
+            Assert.AreEqual((decimal)1.85, trapezoid.Base1);
+            Assert.AreEqual((decimal)2.96, trapezoid.Base2);
+            Assert.AreEqual((decimal).74, trapezoid.Height);
         }
 
         [TestMethod]
