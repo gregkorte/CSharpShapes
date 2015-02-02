@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace CSharpShapes
 {
@@ -27,6 +27,29 @@ namespace CSharpShapes
             }
             this.width = width;
             this.height = height;
+        }
+
+        public override void DrawOnto(Canvas ShapeCanvas, int x, int y)
+        {
+            System.Windows.Shapes.Polygon myPolygon = new System.Windows.Shapes.Polygon();
+            myPolygon.Stroke = System.Windows.Media.Brushes.Tomato;
+            myPolygon.Fill = System.Windows.Media.Brushes.Bisque;
+            myPolygon.StrokeThickness = 2;
+            myPolygon.HorizontalAlignment = HorizontalAlignment.Left;
+            myPolygon.VerticalAlignment = VerticalAlignment.Center;
+            Point point1 = new Point(50, 50);
+            Point point2 = new Point(50, y+50);
+            Point point3 = new Point(x+50, y+50);
+            Point point4 = new Point(x+50, 50);
+
+            PointCollection myPointCollection = new PointCollection();
+            myPointCollection.Add(point1);
+            myPointCollection.Add(point2);
+            myPointCollection.Add(point3);
+            myPointCollection.Add(point4);
+
+            myPolygon.Points = myPointCollection;
+            ShapeCanvas.Children.Add(myPolygon);
         }
 
         public override decimal Area()

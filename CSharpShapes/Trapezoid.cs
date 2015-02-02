@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Controls;
 
 namespace CSharpShapes
 {
@@ -32,6 +33,11 @@ namespace CSharpShapes
             this.base1 = base1;
             this.base2 = base2;
             this.height = height;
+        }
+
+        public override void DrawOnto(Canvas ShapeCanvas, int x, int y)
+        {
+            throw new NotImplementedException();
         }
 
         public override decimal Area()

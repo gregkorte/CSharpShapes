@@ -10,6 +10,10 @@ namespace TestSharpShapes1
     {
         public class MyShape : Shape
         {
+            public override void DrawOnto(Canvas ShapeCanvas, int x, int y)
+            {
+                throw new NotImplementedException();
+            }
             public override int SidesCount
             {
                 get { throw new NotFiniteNumberException(); }
